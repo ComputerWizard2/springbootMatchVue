@@ -5,6 +5,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.security.Key;
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class RedisClient {
 
     public static final long TOKEN_EXPIRES_SECOND = 1800;
-    @Autowired
+    @Resource
     private StringRedisTemplate redisTpl;
 
     /**
